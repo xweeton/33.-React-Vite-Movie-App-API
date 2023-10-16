@@ -12,9 +12,9 @@ function Movie({ movieData }) {
       <p><strong>Plot:</strong> {movieData.Plot}</p>
       <p><strong>Year:</strong> {movieData.Year}</p>
       <p><strong>Rating:</strong></p>
-      {movieData.Ratings.map((rating) => {
+      {movieData.Ratings.map((rating, index) => {
         return (
-          <p key={movieData.Title}>{rating.Source} - {rating.Value}</p>
+          <p key={index}>{rating.Source} - {rating.Value}</p>
         )
       })}
     </>
